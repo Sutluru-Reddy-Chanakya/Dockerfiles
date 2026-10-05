@@ -1,6 +1,4 @@
-# almalinux is exactly same as Redhat image, but completely free
 FROM almalinux:9
-LABEL COURSE="Docker" \
-      TRAINER="Sivakumar" \
-      DURATION="10HRS" \
-      AUTHOR="joindevops"
+RUN dnf install nginx -y
+EXPOSE 80
+CMD ["nginx","-g","daemon off;"]
